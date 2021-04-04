@@ -16,13 +16,13 @@ But it's since grown into a "full website" dedicated to showing the countdown.
 
 Use it for whatever. There isn't really much TO the site.
 
-While I stole and modified the graphics, they aren't my designs. Those belong to [the church](https://subgenius.com/).
+While I stole and modified the graphics, they aren't my designs. Those belong to [the church](http://subgenius.com/).
 
 And god knows who designed the Diploma font being used here. (Where did I even get it from?)
 
 ---
 
-If you're feeling spendy, throw some coins over on [SubGenius.com](https://SubGenius.com/) and get yourself a [Salvation/Membership/Ordainment kit](http://www.subgenius.com/scatalog/membership.htm)!
+If you're feeling spendy, throw some coins over on [SubGenius.com](http://SubGenius.com/) and get yourself a [Salvation/Membership/Ordainment kit](http://www.subgenius.com/scatalog/membership.htm)!
 
 Or get one for a friend.
 
