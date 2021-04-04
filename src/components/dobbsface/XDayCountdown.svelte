@@ -44,7 +44,7 @@
             output.push(`${hours} Hours`);
         }
         if (minutes) {
-            output.push(`${minutes} Mintues`);
+            output.push(`${minutes} Minutes`);
         }
         if (seconds) {
             output.push(`${seconds % 60} Seconds`);
