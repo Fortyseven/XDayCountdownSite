@@ -50,7 +50,7 @@
             output.push(`${seconds % 60} Seconds`);
         }
 
-        output.push("until X-Day!");
+        output.push("Until X-Day!");
 
         return output.join("<br/>");
     };
@@ -90,7 +90,9 @@
         font-size: 2em;
         line-height: 0.9em;
         text-align: center;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
         user-select: none;
+        transform: translateY(-50%);
+        top: 50%;
     }
 </style>
