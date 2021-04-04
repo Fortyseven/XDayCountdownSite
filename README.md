@@ -22,7 +22,7 @@ And god knows who designed the Diploma font being used here. (Where did I even g
 
 ---
 
-If you're feeling spendy, throw some coins over on SubGenius.com and get yourself a [Salvation/Membership/Ordainment kit](http://www.subgenius.com/scatalog/membership.htm)!
+If you're feeling spendy, throw some coins over on [SubGenius.com](https://SubGenius.com/) and get yourself a [Salvation/Membership/Ordainment kit](http://www.subgenius.com/scatalog/membership.htm)!
 
 Or get one for a friend.
 
