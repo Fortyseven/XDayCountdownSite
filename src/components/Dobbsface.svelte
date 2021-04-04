@@ -1,5 +1,5 @@
 <script>
-    import Background from "./dobbsface/Background.svelte";
+    import Background from "./watchface/Background.svelte";
 </script>
 
 <Background />
