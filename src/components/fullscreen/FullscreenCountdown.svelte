@@ -29,10 +29,10 @@
         let seconds;
 
         if (isAfterXDay) {
-            days = moment(today).diff(xday, "days");
-            hours = moment(today).diff(xday, "hours") % 24;
-            minutes = moment(today).diff(xday, "minutes") % 60;
-            seconds = moment(today).diff(xday, "seconds") % 60;
+            days = moment(xday).diff(today, "days");
+            hours = moment(xday).diff(today, "hours") % 24;
+            minutes = moment(xday).diff(today, "minutes") % 60;
+            seconds = moment(xday).diff(today, "seconds") % 60;
             console.log("today is AFTER xday", xday);
         } else {
             days = moment(xday).diff(today, "days");
