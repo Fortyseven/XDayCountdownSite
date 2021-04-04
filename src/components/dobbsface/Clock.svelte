@@ -1,15 +1,11 @@
 <script>
     import { onMount } from "svelte";
+    import moment from "moment";
 
     var time = "";
 
     const getTime = () => {
-        let date = new Date();
-        return (
-            `${addZero(date.getHours())}:` +
-            `${addZero(date.getMinutes())}:` +
-            `${addZero(date.getSeconds())}`
-        );
+        return moment(new Date()).format("h:mm");
     };
 
     const updateClock = () => {
