@@ -39,7 +39,7 @@
         top: 50px;
         font-size: 2.5em;
         text-align: center;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.35);
         user-select: none;
     }
 </style>
