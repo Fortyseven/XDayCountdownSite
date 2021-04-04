@@ -1,6 +1,6 @@
 <script>
-    import Clock from "../Clock.svelte";
-    import XDayCountdown from "../XDayCountdown.svelte";
+    import Clock from "./Clock.svelte";
+    import XDayCountdown from "./XDayCountdown.svelte";
 
     const MODE_TIME = 0;
     const MODE_COUNTDOWN = 1;
