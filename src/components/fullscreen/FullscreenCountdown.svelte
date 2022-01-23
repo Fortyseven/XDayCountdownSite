@@ -1,9 +1,17 @@
 <script>
     import { onMount } from "svelte";
+
+    import store from "../store";
     import { getTimeString, getClockyBits } from "../common";
+
+    import Special from "./Special.svelte";
 
     let clock = "";
     let countdown = "";
+
+    let isItXDay;
+
+    store.isItXDay.subscribe((value) => (isItXDay = value));
 
     /*------------------------------------------------------*/
 
@@ -22,8 +30,12 @@
 </script>
 
 <div class="countdown">
-    <div class="clock">{@html clock}</div>
-    {@html countdown}
+    {#if isItXDay}
+        <Special />
+    {:else}
+        <div class="clock">{@html clock}</div>
+        {@html countdown}
+    {/if}
 </div>
 
 <style>
@@ -34,7 +46,7 @@
         font-size: 12pt;
         line-height: 0.9em;
         text-align: center;
-        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+        text-shadow: 2px 2px 1px #000000bf;
         user-select: none;
         transform: translateY(-50%);
         top: 50%;
