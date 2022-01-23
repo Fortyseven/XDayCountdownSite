@@ -1,7 +1,10 @@
 import dayjs from "dayjs";
 
 /*------------------------------------------------------*/
-const getClockyBits = () => {
+const getClockyBits = ({ no_secs = false } = {}) => {
+    if (no_secs) {
+        return dayjs(new Date()).format("h:mm");
+    }
     return dayjs(new Date()).format("h:mm:ss");
 };
 
