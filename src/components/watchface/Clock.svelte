@@ -1,11 +1,11 @@
 <script>
     import { onMount } from "svelte";
-    import moment from "moment";
+    import dayjs from "dayjs";
 
     var time = "";
 
     const getTime = () => {
-        return moment(new Date()).format("h:mm");
+        return dayjs(new Date()).format("h:mm");
     };
 
     const updateClock = () => {

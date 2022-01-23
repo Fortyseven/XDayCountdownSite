@@ -1,13 +1,13 @@
 <script>
     import { onMount } from "svelte";
-    import moment from "moment";
+    import dayjs from "dayjs";
 
     let clock = "";
     let countdown = "";
 
     /*------------------------------------------------------*/
     const getClockyBits = () => {
-        return moment(new Date()).format("h:mm:ss");
+        return dayjs(new Date()).format("h:mm:ss");
     };
 
     /*------------------------------------------------------*/
@@ -16,8 +16,8 @@
         let today = new Date();
         let cur_year = today.getFullYear();
 
-        let isAfterXDay = moment(today).isAfter(
-            moment(`${cur_year}-07-05 07:00`)
+        let isAfterXDay = dayjs(today).isAfter(
+            dayjs(`${cur_year}-07-05 07:00`)
         );
         let xDayYear = cur_year + (isAfterXDay ? 1 : 0);
 
@@ -29,16 +29,16 @@
         let seconds;
 
         if (isAfterXDay) {
-            days = moment(xday).diff(today, "days");
-            hours = moment(xday).diff(today, "hours") % 24;
-            minutes = moment(xday).diff(today, "minutes") % 60;
-            seconds = moment(xday).diff(today, "seconds") % 60;
+            days = dayjs(xday).diff(today, "days");
+            hours = dayjs(xday).diff(today, "hours") % 24;
+            minutes = dayjs(xday).diff(today, "minutes") % 60;
+            seconds = dayjs(xday).diff(today, "seconds") % 60;
             console.log("today is AFTER xday", xday);
         } else {
-            days = moment(xday).diff(today, "days");
-            hours = moment(xday).diff(today, "hours") % 24;
-            minutes = moment(xday).diff(today, "minutes") % 60;
-            seconds = moment(xday).diff(today, "seconds") % 60;
+            days = dayjs(xday).diff(today, "days");
+            hours = dayjs(xday).diff(today, "hours") % 24;
+            minutes = dayjs(xday).diff(today, "minutes") % 60;
+            seconds = dayjs(xday).diff(today, "seconds") % 60;
             console.log("today is BEFORE xday", xday);
         }
 
