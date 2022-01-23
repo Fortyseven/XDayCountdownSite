@@ -6,14 +6,6 @@ const getClockyBits = () => {
 };
 
 /*------------------------------------------------------*/
-function addZero(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
-}
-
-/*------------------------------------------------------*/
 const getTime = () => {
     // let today = new Date(2021, 7, 4);
     let today = new Date();
