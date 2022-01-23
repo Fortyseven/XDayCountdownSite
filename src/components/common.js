@@ -70,7 +70,11 @@ function getTimeString() {
         output.push(`${seconds % 60} Seconds`);
     }
 
-    output.push("Until X-Day!");
+    if (output.length) {
+        output.push("Until X-Day!");
+    } else {
+        output.push("Damn it, Stang!");
+    }
 
     return output.join("<br/>");
 }
