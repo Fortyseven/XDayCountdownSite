@@ -1,15 +1,11 @@
 <script>
     import { onMount } from "svelte";
-    import dayjs from "dayjs";
+    import { getClockyBits } from "../common";
 
     var time = "";
 
-    const getTime = () => {
-        return dayjs(new Date()).format("h:mm");
-    };
-
     const updateClock = () => {
-        time = getTime();
+        time = getClockyBits({ no_secs: true });
     };
 
     onMount(() => {

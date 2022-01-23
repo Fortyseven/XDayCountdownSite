@@ -1,12 +1,12 @@
 <script>
     import { onMount } from "svelte";
-    import { getTime } from "../common";
+    import { getTimeString } from "../common";
 
     let time = "";
 
     /*------------------------------------------------------*/
     const updateClock = () => {
-        time = getTime();
+        time = getTimeString();
     };
 
     /*------------------------------------------------------*/

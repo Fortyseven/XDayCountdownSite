@@ -6,7 +6,7 @@ const getClockyBits = () => {
 };
 
 /*------------------------------------------------------*/
-const getTime = () => {
+const getTimeString = () => {
     // let today = new Date(2021, 7, 4);
     let today = new Date();
     let cur_year = today.getFullYear();
@@ -55,4 +55,4 @@ const getTime = () => {
     return output.join("<br/>");
 };
 
-export { getTime, getClockyBits };
+export { getTimeString, getClockyBits };

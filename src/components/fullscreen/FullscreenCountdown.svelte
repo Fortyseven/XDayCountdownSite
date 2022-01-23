@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { getTime, getClockyBits } from "../common";
+    import { getTimeString, getClockyBits } from "../common";
 
     let clock = "";
     let countdown = "";
@@ -10,7 +10,7 @@
     /*------------------------------------------------------*/
     const updateClock = () => {
         clock = getClockyBits();
-        countdown = getTime();
+        countdown = getTimeString();
     };
 
     /*------------------------------------------------------*/
