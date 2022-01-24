@@ -29,8 +29,9 @@ Or get one for a friend.
 Or just keep buying them until your card is rejected!
 
 ---
+
 Dr. Fortyseven (2021-04-03)
 
-https://Network47.xyz/
+https://Network47.org/
 
 [@fortyseven](https://twitter.com/fortyseven)
