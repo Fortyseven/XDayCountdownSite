@@ -1,5 +1,6 @@
 import { get } from "svelte/store";
 import dayjs from "dayjs";
+import pluralize from "pluralize";
 
 import store from "./store";
 
@@ -14,9 +15,22 @@ function getClockyBits({ no_secs = false } = {}) {
 }
 
 /**
- * Returns whether it's past 7am on XDay, but before midnight.
+ * Returns whether it's any time from 0000 to 2359 on 7/5
  */
-function getIsItXDayAllDay(date) {
+function isItXDayAllDay() {
+    const today = new Date();
+    const cur_year = today.getFullYear();
+    const res = dayjs(today).isSame(`${cur_year}-07-05`, "day");
+
+    console.log("isItXDayAllDay", res);
+
+    return res;
+}
+
+/**
+ * Returns whether it's past 0700-2359 on 7/5, but before midnight.
+ */
+function getIsItXDay(date) {
     const cur_year = date.getFullYear();
 
     const isAfterXDay = dayjs(date).isAfter(`${cur_year}-07-05 07:00:00`);
@@ -53,25 +67,25 @@ function getTimeString() {
         seconds = dayjs(xday).diff(today, "seconds") % 60;
     }
 
-    store.isItXDay.set(getIsItXDayAllDay(today));
-
     let output = [];
 
     if (days) {
-        output.push(`${days} Days`);
+        output.push(`${days} ${pluralize("Day", days)}`);
     }
     if (hours) {
-        output.push(`${hours} Hours`);
+        output.push(`${hours} ${pluralize("Hour", hours)}`);
     }
     if (minutes) {
-        output.push(`${minutes} Minutes`);
+        output.push(`${minutes} ${pluralize("Minute", minutes)}`);
     }
     if (seconds) {
-        output.push(`${seconds % 60} Seconds`);
+        output.push(`${seconds % 60} ${pluralize("Second", seconds)}`);
     }
 
     if (output.length) {
-        output.push("Until X-Day!");
+        let xdayNum = cur_year - 1997;
+        if (isAfterXDay) xdayNum++;
+        output.push(`Until ${xdayNum} X-Day!`);
     } else {
         output.push("Damn it, Stang!");
     }
@@ -79,4 +93,4 @@ function getTimeString() {
     return output.join("<br/>");
 }
 
-export { getTimeString, getClockyBits };
+export { getTimeString, getClockyBits, isItXDayAllDay };

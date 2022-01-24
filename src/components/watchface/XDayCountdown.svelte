@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { getTimeString } from "../common";
+    import { getTimeString } from "../../common";
 
     let time = "";
 

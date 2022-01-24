@@ -1,24 +1,30 @@
 <script>
     import { onMount } from "svelte";
 
-    import store from "../store";
-    import { getTimeString, getClockyBits } from "../common";
+    import store from "../../store";
+    import { getTimeString, getClockyBits } from "../../common";
 
     import Special from "./Special.svelte";
+    import dayjs from "dayjs";
+    import isBetween from "dayjs/plugin/isBetween";
+
+    dayjs.extend(isBetween);
 
     let clock = "";
     let countdown = "";
 
     let isItXDay;
+    let executeSpecial = false;
 
     store.isItXDay.subscribe((value) => (isItXDay = value));
-
-    /*------------------------------------------------------*/
 
     /*------------------------------------------------------*/
     const updateClock = () => {
         clock = getClockyBits();
         countdown = getTimeString();
+        if (dayjs(new Date()).isSame("2022-07-05 06:59:35", "second")) {
+            executeSpecial = true;
+        }
     };
 
     /*------------------------------------------------------*/
@@ -30,8 +36,11 @@
 </script>
 
 <div class="countdown">
-    {#if isItXDay}
+    {#if executeSpecial}
         <Special />
+    {/if}
+    {#if isItXDay}
+        <h1>It is an X-Day.</h1>
     {:else}
         <div class="clock">{@html clock}</div>
         {@html countdown}

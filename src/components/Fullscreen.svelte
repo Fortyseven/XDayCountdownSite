@@ -2,7 +2,9 @@
     import FullscreenCountdown from "./fullscreen/FullscreenCountdown.svelte";
 </script>
 
-<div id="Container"><FullscreenCountdown /></div>
+<div id="Container">
+    <FullscreenCountdown />
+</div>
 
 <style>
     #Container {

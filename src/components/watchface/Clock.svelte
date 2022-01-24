@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { getClockyBits } from "../common";
+    import { getClockyBits } from "../../common";
 
     var time = "";
 
