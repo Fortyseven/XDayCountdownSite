@@ -22,8 +22,6 @@ function isItXDayAllDay() {
     const cur_year = today.getFullYear();
     const res = dayjs(today).isSame(`${cur_year}-07-05`, "day");
 
-    console.log("isItXDayAllDay", res);
-
     return res;
 }
 
