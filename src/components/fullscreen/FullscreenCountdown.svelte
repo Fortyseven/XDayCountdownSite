@@ -78,7 +78,7 @@
     }
     @media (min-width: 1024px) {
         .countdown {
-            font-size: 17vw;
+            font-size: 15vw;
         }
     }
     @media (min-width: 1440px) {
