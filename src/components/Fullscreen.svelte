@@ -10,7 +10,7 @@
     #Container {
         width: 100vw;
         height: 100vh;
-        background: url("../assets/images/dobbsface-faded.png");
+        background: url("/assets/images/dobbsface-faded.png");
         background-size: cover;
         background-position: center;
     }

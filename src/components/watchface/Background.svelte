@@ -27,7 +27,7 @@
 
 <style>
     .background {
-        background: url("../assets/images/dobbsface-normal.png");
+        background: url("/assets/images/dobbsface-normal.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -43,6 +43,6 @@
         box-shadow: 0 0 30px black;
     }
     .countdown {
-        background-image: url("../assets/images/dobbsface-faded.png");
+        background-image: url("/assets/images/dobbsface-faded.png");
     }
 </style>
